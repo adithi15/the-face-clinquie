@@ -108,16 +108,13 @@ function Hero() {
         <div className="absolute z-20 flex flex-col items-center pointer-events-none px-4 w-full max-w-6xl">
           <h1
             ref={headingRef}
-            // TEXT STYLING:
-            // 1. text-xl md:text-3xl -> Smaller, elegant size
-            // 2. bg-clip-text -> Makes the text itself have a gradient (Glass feel)
-            // 3. drop-shadow -> Adds the glow
             className={`
-      font-medium tracking-wide leading-relaxed text-center
-      text-l md:text-3xl
-      text-transparent bg-clip-text bg-gradient-to-b from-white via-white/90 to-white/50
+      font-medium tracking-wide leading-tight text-center
+      text-xl md:text-3xl lg:text-4xl
+      text-transparent bg-clip-text bg-gradient-to-b from-white via-white/90 to-white/60
       drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]
       transition-all duration-[2500ms] ease-out
+      flex flex-col gap-2 md:gap-4
       ${
         headingInView
           ? "opacity-100 blur-0 translate-y-0"
@@ -125,13 +122,20 @@ function Hero() {
       }
     `}
           >
-            Faith
-            <span className="text-white/30 font-thin mx-2 md:mx-4">|</span>
-            Finesse
-            <span className="text-white/30 font-thin mx-2 md:mx-4">|</span>
-            Maxillo-facial Aesthetics
-            <span className="text-white/30 font-thin mx-2 md:mx-4">|</span>
-            Dento-facial Aesthetics
+            {/* Line 1: The Core Values */}
+            <span className="block">
+              Faith
+              <span className="text-white/30 font-thin mx-3 md:mx-6">|</span>
+              Finesse
+              <span className="text-white/30 font-thin mx-3 md:mx-6"></span>
+              Maxillo-facial Aesthetics
+            </span>
+
+            {/* Line 2: The Medical Specialities (Dento is here) */}
+            
+              <span className="block">|
+              Dento-facial Aesthetics
+            </span>
           </h1>
         </div>
 
