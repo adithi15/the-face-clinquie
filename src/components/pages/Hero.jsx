@@ -110,7 +110,7 @@ function Hero() {
             ref={headingRef}
             className={`
       font-medium tracking-wide leading-tight text-center
-      text-xl md:text-3xl lg:text-4xl
+      text-l md:text-4xl lg:text-4xl
       text-transparent bg-clip-text bg-gradient-to-b from-white via-white/90 to-white/60
       drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]
       transition-all duration-[2500ms] ease-out
