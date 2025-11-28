@@ -16,11 +16,11 @@ function Navbar() {
   // Updated Links Structure
   const navLinks = [
     { name: "Home", href: "/", type: "route" },
-    // { name: "Why Us", href: "/#features", type: "hash" },
+    { name: "Treatments", href: "/images", type: "hash" },
     { name: "FAQ Section", href: "/faqsection", type: "hash" },
-    { name: "Our Experts", href: "/#doctors", type: "hash" }, // Scrolls to DoctorInfo on Home
+    // { name: "Our Experts", href: "/#doctors", type: "hash" }, // Scrolls to DoctorInfo on Home
     { name: "Gallery", href: "/image", type: "route" }, // Goes to Gallery Page
-    { name: "Get Consultation", href: "/pricing", type: "route" }, // Goes to Pricing Page
+    { name: "Offers", href: "/pricing", type: "route" }, // Goes to Pricing Page
   ];
 
   return (
