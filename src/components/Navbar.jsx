@@ -16,8 +16,8 @@ function Navbar() {
   // Updated Links Structure
   const navLinks = [
     { name: "Home", href: "/", type: "route" },
-    { name: "Treatments", href: "/images", type: "hash" },
-    { name: "FAQ Section", href: "/faqsection", type: "hash" },
+    { name: "Treatments", href: "/images", type: "route" },
+    { name: "FAQ Section", href: "/faqsection", type: "route" },
     // { name: "Our Experts", href: "/#doctors", type: "hash" }, // Scrolls to DoctorInfo on Home
     // { name: "", href: "/image", type: "route" }, // Goes to Gallery Page
     { name: "Offers", href: "/pricing", type: "route" }, // Goes to Pricing Page
