@@ -1,32 +1,65 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
-import Video from "./components/Video";
-import LiquidGlassSearch from "./components/LiquidGlassSearch";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
-function App() {
-  const [showNavbar, setShowNavbar] = useState(false); // control navbar visibility
+// Components
+import Navbar from "./components/Navbar";
+import Hero from "./components/pages/Hero";
+import DoctorInfo from "./components/DoctorInfo"; // We import this to stack it
+import Pricing from "./components/Pricing";
+import Images from "./components/pages/Images";
+import Footer from "./components/Footer";
+
+
+
+function AppContent() {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const location = useLocation();
+
+  // If we are NOT on the home page, show the Navbar immediately
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setShowNavbar(true);
+    }
+  }, [location]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 justify-center">
+    <div className="min-h-screen bg-gray-100">
       <div
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-1000 ease-in-out ${
-          showNavbar ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
+        className={`fixed top-0 w-full z-50 ${
+          showNavbar ? "opacity-100" : "opacity-0"
         }`}
       >
         <Navbar />
       </div>
 
-      <main>
-        <Hero onAnimationComplete={() => setShowNavbar(true)} />
-        {/* <Pricing />
-        <Video />
-        <LiquidGlassSearch /> */}
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero onAnimationComplete={() => setShowNavbar(true)} />
+              <DoctorInfo />
+            </>
+          }
+        />
+        <Route path="/images" element={<Images />} />
+        <Route path="/pricing" element={<Pricing />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
 
-export default App;
- 
+export default function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
