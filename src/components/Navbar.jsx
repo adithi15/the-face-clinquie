@@ -19,7 +19,7 @@ function Navbar() {
     { name: "Treatments", href: "/images", type: "hash" },
     { name: "FAQ Section", href: "/faqsection", type: "hash" },
     // { name: "Our Experts", href: "/#doctors", type: "hash" }, // Scrolls to DoctorInfo on Home
-    { name: "Gallery", href: "/image", type: "route" }, // Goes to Gallery Page
+    // { name: "", href: "/image", type: "route" }, // Goes to Gallery Page
     { name: "Offers", href: "/pricing", type: "route" }, // Goes to Pricing Page
   ];
 
@@ -43,34 +43,34 @@ function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex absolute right-[7%] transform -translate-x-1/2 px-7 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] relative">
-          {navLinks.map((link) => (
-            <React.Fragment key={link.name}>
-              {link.type === "route" ? (
-                <Link
-                  to={link.href}
-                  className="px-3 py-2 mx-1 text-sm font-light text-white relative group"
-                >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </Link>
-              ) : (
-                <a
-                  href={link.href}
-                  className="px-3 py-2 mx-1 text-sm font-light text-white relative group"
-                >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </a>
-              )}
-            </React.Fragment>
-          ))}
+<div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 px-7 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]">
+  {navLinks.map((link) => (
+    <React.Fragment key={link.name}>
+      {link.type === "route" ? (
+        <Link
+          to={link.href}
+          className="px-3 py-2 mx-1 text-sm font-light text-white relative group"
+        >
+          {link.name}
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+        </Link>
+      ) : (
+        <a
+          href={link.href}
+          className="px-3 py-2 mx-1 text-sm font-light text-white relative group"
+        >
+          {link.name}
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+        </a>
+      )}
+    </React.Fragment>
+  ))}
 
-          {/* Shine reflection */}
-          <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
-            <div className="absolute top-0 left-[-50%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shine_3s_infinite]" />
-          </div>
-        </div>
+  {/* Shine reflection */}
+  <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+    <div className="absolute top-0 left-[-50%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shine_3s_infinite]" />
+  </div>
+</div>
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
