@@ -29,7 +29,7 @@ function Footer() {
                 C
               </div>
               <span className="text-2xl font-bold text-white tracking-tight">
-                Clinic.
+                The-Face-Clinique
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">

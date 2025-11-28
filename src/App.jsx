@@ -14,6 +14,7 @@ import Pricing from "./components/Pricing";
 import Images from "./components/pages/Images";
 import Footer from "./components/Footer";
 
+import FaqSection from "./components/pages/FaqSection";
 
 
 function AppContent() {
@@ -49,6 +50,7 @@ function AppContent() {
         />
         <Route path="/images" element={<Images />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/faqsection" element={<FaqSection />} />
       </Routes>
       <Footer />
     </div>

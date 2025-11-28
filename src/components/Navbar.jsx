@@ -16,10 +16,10 @@ function Navbar() {
   // Updated Links Structure
   const navLinks = [
     { name: "Home", href: "/", type: "route" },
-    { name: "Why Us", href: "/#features", type: "hash" },
-    { name: "Our Service", href: "/#about", type: "hash" },
+    // { name: "Why Us", href: "/#features", type: "hash" },
+    { name: "FAQ Section", href: "/faqsection", type: "hash" },
     { name: "Our Experts", href: "/#doctors", type: "hash" }, // Scrolls to DoctorInfo on Home
-    { name: "Gallery", href: "/images", type: "route" }, // Goes to Gallery Page
+    { name: "Gallery", href: "/image", type: "route" }, // Goes to Gallery Page
     { name: "Get Consultation", href: "/pricing", type: "route" }, // Goes to Pricing Page
   ];
 
